@@ -10,4 +10,18 @@
   margin-left: -5em;
 }
 
+.time {
+  text-align: right;
+  margin-right: 5em;
+}
+
+.date {
+  font-weight: bold;
+  font-size: 3em;
+}
+
+.hour {
+  font-size: 2em;
+}
+
 

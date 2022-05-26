@@ -35,3 +35,8 @@
    0% {opacity:0;}
    100% {opacity:1;}
  }
+
+ .instruction {
+    font-weight: bold;
+    margin-top: 1em;
+ }

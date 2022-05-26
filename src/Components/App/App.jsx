@@ -12,9 +12,22 @@ import './App.css';
 import Logo from '../../Assets/logo.png';
 
 function App() {
+  const today = new Date();
+
+  const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December',
+  ];
+
+  const date = `${today.getDate()} ${monthNames[today.getMonth()]} ${today.getFullYear()}`;
+  const hour = `${today.getHours()}:${today.getMinutes()}:${today.getSeconds()}`;
+
   return (
     <div className="App">
       <img className="logo" src={Logo} alt={Logo} />
+      <div className="time">
+        <div className="date">{date}</div>
+        <div className="hour">{hour}</div>
+      </div>
       <MainChart />
       <Carousel />
       <SideMenu />

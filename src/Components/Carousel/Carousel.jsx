@@ -33,6 +33,7 @@ function Carousel() {
         ? (
           <div className="swiper-container">
             <SwiperSlide>
+              <div className="instruction">Please push on the below button to add new user !</div>
               <button type="button" onClick={addUser}>
                 <AddIcon />
               </button>
