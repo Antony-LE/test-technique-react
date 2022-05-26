@@ -1,7 +1,8 @@
 import React from 'react';
 
 import SideMenu from '../SideMenu/SideMenu';
-import ApexChart from '../ApexChart/ApexChart';
+import MainChart from '../MainChart/MainChart';
+import Carousel from '../Carousel/Carousel';
 
 import './App.css';
 
@@ -11,7 +12,8 @@ function App() {
   return (
     <div className="App">
       <img className="logo" src={Logo} alt={Logo} />
-      <ApexChart />
+      <MainChart />
+      <Carousel />
       <SideMenu />
     </div>
   );

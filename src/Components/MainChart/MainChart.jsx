@@ -1,9 +1,9 @@
 /* eslint-disable react/destructuring-assignment */
 import React, { Component } from 'react';
 import Chart from 'react-apexcharts';
-import './ApexChart.css';
+import './MainChart.css';
 
-class ApexChart extends Component {
+class MainChart extends Component {
   constructor(props) {
     super(props);
 
@@ -11,8 +11,6 @@ class ApexChart extends Component {
       options: {
         chart: {
           id: 'basic-bar',
-          height: '500px',
-          width: '100px',
         },
         xaxis: {
           categories: [1950, 1960, 1970, 1980, 1990, 2000, 2010],
@@ -45,4 +43,4 @@ class ApexChart extends Component {
   }
 }
 
-export default ApexChart;
+export default MainChart;
