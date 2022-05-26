@@ -1,3 +1,5 @@
-# Hello world !
+# How to laucch the project
 
-I hope that'll enjoy the work behind this project !
+run the command line yarn start or npm run start.
+
+I hope that you'll enjoy the work behind this project.
