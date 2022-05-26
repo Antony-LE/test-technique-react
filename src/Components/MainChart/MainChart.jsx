@@ -1,6 +1,10 @@
 /* eslint-disable react/destructuring-assignment */
 import React, { Component } from 'react';
+
+// Importation des composants à afficher
 import Chart from 'react-apexcharts';
+
+// Importation du fichier de style
 import './MainChart.css';
 
 class MainChart extends Component {

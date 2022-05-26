@@ -1,52 +1,69 @@
+/* eslint-disable react/jsx-no-useless-fragment */
 import React, { useState } from 'react';
 
-// import AddIcon from '@mui/icons-material/Add';
-
-// Import Swiper React components
+// Importation des modules Swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// import required modules
 import { Pagination } from 'swiper';
-// import AddUserButton from '../AddUserButton/AddUserButton';
+
+// Importation des modules MUI
+import AddIcon from '@mui/icons-material/Add';
+
+// Importation des composants à afficher
 import UserCard from '../UserCard/UserCard';
 
-// import style
+// Importation des fichiers de style
 import './Carousel.css';
 import 'swiper/swiper-bundle.css';
 
 function Carousel() {
-  // Define AddButton action on clic
-
+  // Création d'un state permettant de stocker tous les utilisateurs dans un tableau
   const [{ users }, setUsers] = useState({ users: [] });
 
+  /* Fontion permettant d'ajouter une carte utilisateur dans le tableau users
+  et de récupérer son nouvel état sans le spread operator un nouveau tableau sera
+  généré à chaque fois */
   const addUser = () => {
     users.push(<div key={users.length}><UserCard /></div>);
     setUsers({ users: [...users] });
   };
 
   return (
-    <div className="swiper-container">
-      <Swiper
-        slidesPerView={4}
-        spaceBetween={1}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Pagination]}
-        className="mySwiper"
-      >
-        <SwiperSlide>
-          <button type="button" onClick={addUser}>
-            Add
-          </button>
-        </SwiperSlide>
-        { users.map((user) => (
-          <SwiperSlide>
-            {user}
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
+    <>
+      {users.length === 0
+        ? (
+          <div className="swiper-container">
+            <SwiperSlide>
+              <button type="button" onClick={addUser}>
+                <AddIcon />
+              </button>
+            </SwiperSlide>
+          </div>
+        )
+        : (
+          <div className="swiper-alt-container">
+            <Swiper
+              slidesPerView={4}
+              spaceBetween={1}
+              pagination={{
+                clickable: true,
+              }}
+              modules={[Pagination]}
+              className="mySwiper"
+            >
+              <SwiperSlide>
+                <button type="button" onClick={addUser}>
+                  <AddIcon />
+                </button>
+              </SwiperSlide>
+              { users.map((user) => (
+                <SwiperSlide>
+                  {user}
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        )}
+    </>
   );
 }
 
