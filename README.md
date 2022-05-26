@@ -1,5 +1,5 @@
-# How to laucch the project
+# How to launch the project ?
 
-run the command line yarn start or npm run start.
+Run the command line yarn start or npm run start.
 
-I hope that you'll enjoy the work behind this project.
+I hope that you'll enjoy the work behind this project !
