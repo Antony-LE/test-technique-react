@@ -12,6 +12,7 @@ import './App.css';
 import Logo from '../../Assets/logo.png';
 
 function App() {
+  // fonctions permettant de récupérer la date et l'heure
   const today = new Date();
 
   const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',

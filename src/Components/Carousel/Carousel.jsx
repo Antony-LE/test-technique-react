@@ -29,11 +29,12 @@ function Carousel() {
 
   return (
     <>
+      {/* Conditionnement de l'affichage du Carousel en fonction du tableau users */}
       {users.length === 0
         ? (
           <div className="swiper-container">
             <SwiperSlide>
-              <div className="instruction">Please push on the below button to add new user !</div>
+              <div className="instruction">Please click on the below button to add new users !</div>
               <button type="button" onClick={addUser}>
                 <AddIcon />
               </button>
@@ -52,10 +53,13 @@ function Carousel() {
               className="mySwiper"
             >
               <SwiperSlide>
+                {/* Ajout de la fonction add user à l'écouteur d'évènement Onclick */}
                 <button type="button" onClick={addUser}>
                   <AddIcon />
                 </button>
               </SwiperSlide>
+              {/* On map sur chaque itération du tableau user
+              pour afficher dynamiquement les cards */}
               { users.map((user) => (
                 <SwiperSlide>
                   {user}

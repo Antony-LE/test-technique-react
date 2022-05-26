@@ -27,7 +27,7 @@ class MainChart extends Component {
       series: [
         {
           name: 'in Billions',
-          data: [30, 40, 45, 50, 49, 60, 70],
+          data: [30, 40, 45, 50, 55, 60, 70],
         },
       ],
     };
