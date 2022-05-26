@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 
-// import axios from 'axios';
-
 // import AddIcon from '@mui/icons-material/Add';
 
 // Import Swiper React components
@@ -17,19 +15,7 @@ import './Carousel.css';
 import 'swiper/swiper-bundle.css';
 
 function Carousel() {
-  // Define AddButton action on click
-
-  // const [userPicture, setUserPicture] = useState('');
-  // const [userPicture, setUserPicture] = useState('');
-  // const [userPicture, setUserPicture] = useState('');
-  // const [userPicture, setUserPicture] = useState('');
-  // const [userPicture, setUserPicture] = useState('');
-
-  // function handleRandomUserGenration() {
-  //   axios.get('https://randomuser.me/api/').then((response) => {
-
-  //   });
-  // }
+  // Define AddButton action on clic
 
   const [{ users }, setUsers] = useState({ users: [] });
 
@@ -41,7 +27,7 @@ function Carousel() {
   return (
     <div className="swiper-container">
       <Swiper
-        slidesPerView={3}
+        slidesPerView={4}
         spaceBetween={1}
         pagination={{
           clickable: true,
